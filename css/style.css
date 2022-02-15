@@ -89,8 +89,8 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
+  left: -500px;
   position: absolute;
-  left: 500px;
 }
 
 
@@ -104,13 +104,14 @@ nav a:focus{
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 30px; 
 }
 
 /* Requirements 6-10 here: */
 .intro{
   background-image: url('../images/header.jpg');
-  background-color: #DDDDDD;
+  background-color: #707070; 
   min-height: 400px;
   background-attachment: fixed;
   background-position: center;
@@ -174,11 +175,10 @@ nav a:focus{
 }
 
 .text{
-  text-align: center;
+  align-self: center;
   max-height: 25vh;
   overflow: scroll;
 }
-
 
 @media screen and (min-width: 700px){
   nav{
@@ -191,17 +191,21 @@ nav a:focus{
     margin-left: 5%;
     margin-right:0;
   }
-
   
   /* Requirements 12-15 here: */
   a.skip:focus{
-    text-align: left;
+    position: absolute;
+    left: 0px;
     top: 20px;
+    border-top: 2px solid yellow;
+    outline: none;
   }
 
   .container{
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px;
+      /* -1.25: container grid rows format [FAILED]*/
+
   }
 
   .about{
