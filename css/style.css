@@ -104,9 +104,10 @@ nav a:focus{
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 30px; 
 }
+  /* -1.25: container grid rows format [FAILED]*/
+
 
 /* Requirements 6-10 here: */
 .intro{
@@ -203,9 +204,7 @@ nav a:focus{
 
   .container{
     grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: 300px 300px 300px 300px;
-      /* -1.25: container grid rows format [FAILED]*/
-
+    grid-template-rows: repeat(4,300px);
   }
 
   .about{
